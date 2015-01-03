@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: UTF-8 -*-
 
-from pycommu.connection_manager import PyConnectionManager
-from cslab import PySyncConnectionManager
+from connection_manager import PyConnectionManager
+# from cslab import PySyncConnectionManager
 
 # TODO: 同步客户端
 if __name__ == '__main__':

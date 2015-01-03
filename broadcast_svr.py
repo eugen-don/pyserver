@@ -4,7 +4,7 @@ __author__ = 'yinp'
 # coding: utf-8
 
 import signal
-from pycommu.sync_server import *
+from sync_server import *
 
 
 class PyBroadcastServer(PySyncServer):

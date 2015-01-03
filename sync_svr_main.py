@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 __author__ = 'yinp'
 
-from pycommu.sync_server import *
+from sync_server import *
 import signal
 # from protodesc.snake_pb2 import *
 import re

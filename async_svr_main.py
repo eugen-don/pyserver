@@ -3,7 +3,7 @@
 __author__ = 'yinp'
 
 import signal
-from pycommu.async_server import PyAsyncServer
+from async_server import PyAsyncServer
 
 if __name__ == "__main__":
     # signal.signal(signal.SIGINT, signal.SIG_IGN)

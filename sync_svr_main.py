@@ -83,17 +83,12 @@ class SimpleLogicServer(PySyncServer):
     def _on_process(self, connection):
         logging.info(connection.request_data)
         try:
-            # connection.request_data, timeout = re.split("#", connection.request_data)
-            # print("part1={0}, part2={1}".format(connection.request_data, timeout))
-            #
-            # time.sleep(int(timeout) / 1000.)
             connection.response_data = connection.request_data
 
         except:
             logging.debug(sys.exc_info())
 
         return connection.response_data
-
 
 mainsvr = SimpleLogicServer(('', 9000))
 

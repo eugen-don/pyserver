@@ -179,12 +179,11 @@ class PySyncServer(object):
         self._server_sock.listen(32)
         self._epoll_unit.register(self._server_sock.fileno(), select.EPOLLOUT | select.EPOLLIN)
 
-        logging.info("Server Started @ {0}:{1}...".format(self._server_ip, self._server_port))
+        logging.info("Server Started @ {0}:{1}, Listen Sock is {2}...".format(self._server_ip, self._server_port, self._server_sock.fileno()))
         self._prepare()
 
         while True:
             try:
-                # logging.info("waiting connection, current total connection: {0}...".format(len(self._server_connection_pool)))
                 self._events = self._epoll_unit.poll(timeout=self._frame_time)
                 # logging.info("received events len:{0}".format(len(self._events)))
                 for fd, event in self._events:

@@ -7,7 +7,7 @@ from connection_manager import PyConnectionManager
 # TODO: 同步客户端
 if __name__ == '__main__':
     mgr = PyConnectionManager()
-    conn = mgr.create_session("localhost", 9000, "client", 300, True)
+    conn = mgr.create_session("localhost", 9100, "client", 300, True)
     conn.request_data = "async server with backend server test"
     mgr.prepare()
     mgr.startup()
